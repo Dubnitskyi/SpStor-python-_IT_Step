@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="h1 py-5  fw-normal text-center">Вхід</h1>
+    <div style="height: 450px;">
+        <main class="p-4 p-md-5 border rounded-3 form-signin w-100 m-auto bg-light" style="color: black">
+            <form action="{% url 'users:login' %}" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="w-100 btn btn-lg btn-primary" type="submit">Увійти</button>
+                <input type="hidden" name="next" value="{% url 'myProject:index' %}">
+            </form>
+        </main>
+    </div>
+
+{% endblock content %}

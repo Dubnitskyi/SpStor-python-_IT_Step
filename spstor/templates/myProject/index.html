@@ -1,6 +1,7 @@
-{% extends 'myProject/base.html' %}
-
+{% extends 'base.html' %}
+{% load static %}
 {% block content %}
+    <!--suppress HtmlUnknownTarget -->
     <div id="myCarousel" class="carousel slide " data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
@@ -9,16 +10,16 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item" >
-                <center><img src="/files/user/news1.png" class="bd-placeholder-img" width="1100px" height="500px" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <center><img src="{% static 'images/menu_img/news1.png' %}" class="bd-placeholder-img" width="1100px" height="500px" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <rect width="100%" height="100%" fill="#777"></rect></center>
             </div>
             <div class="carousel-item">
-                <center><img src="/files/user/news02.png" class="bd-placeholder-img" width="1100px" height="500px" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <center><img src="{% static 'images/menu_img/news02.png' %}" class="bd-placeholder-img" width="1100px" height="500px" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <rect width="100%" height="100%" fill="#777"></rect></center>
                 </img>
             </div>
             <div class="carousel-item active">
-                <center><img src="/files/user/news3.png" class="bd-placeholder-img" width="1100px" height="500px" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <center><img src="{% static 'images/menu_img/news3.png' %}" class="bd-placeholder-img" width="1100px" height="500px" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <rect width="100%" height="100%" fill="#777"></rect></center>
                 </img>
             </div>
@@ -36,21 +37,21 @@
     <h2 class="h3 mb-5 fw-normal text-center">Найпопулярніші Категорії</h2>
     <div class="container marketing">
         <div class="row row-cols-1 row-cols-md-3 g-4">
-            <a href="/categori/view/6" style="color: white; text-decoration: none;">
+            <a style="color: white; text-decoration: none;">
                 <div class="col">
-                    <center><img src="/files/user/mmo3.png" class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"></center>
+                    <center><img src="{% static 'images/menu_img/mmo3.png' %}" class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"></center>
                     <rect width="100%" height="100%" fill="#777"></rect></img>
                     <h2 class="fw-normal text-center" href="/categori/view/6">MMORPG</h2>
                 </div></a>
-            <a href="/categori/view/1" style="color: white; text-decoration: none;">
+            <a style="color: white; text-decoration: none;">
                 <div class="col">
-                    <center><img src="/AFK/categori/rpg.png" class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"></center>
+                    <center><img src="{% static 'images/menu_img/rpg123.png' %}" class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"></center>
                     <rect width="100%" height="100%" fill="#777"></rect></img>
                     <h2 class="fw-normal text-center">RPG</h2>
                 </div></a>
-            <a href="/categori/view/7" style="color: white; text-decoration: none;">
+            <a style="color: white; text-decoration: none;">
                 <div class="col">
-                    <center><img src="/files/user/stels.png" class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"></center>
+                    <center><img src="{% static 'images/menu_img/stels.png' %}" class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"></center>
                     <rect width="100%" height="100%" fill="#777"></rect></img>
                     <h2 class="fw-normal text-center">Стелс-ігри</h2>
                 </div></a>
@@ -71,7 +72,7 @@
                         обмежується приблизно від десятка до кілька сотень людей, а в більшості випадків 64-ма, 32-ма або 16-ма гравцями.</p></li></ul>
             </div>
             <div class="col-md-5">
-                <img src="/files/user/mmo3.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <img src="{% static 'images/menu_img/mmo3.png' %}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
             </div>
         </div>
 
@@ -86,7 +87,7 @@
                     та розвиваються, слідуючи сюжету.</p>
             </div>
             <div class="col-md-5 order-md-1">
-                <img src="/AFK/categori/rpg.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <img src="{% static 'images/menu_img/rpg123.png' %}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
             </div>
         </div>
 
@@ -101,7 +102,7 @@
                     стелс-бойовики. Частіше за все трапляються проєкти, що містять елементи стелсу.</p>
             </div>
             <div class="col-md-5">
-                <img src="/files/user/stels.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <img src="{% static 'images/menu_img/stels.png' %}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
             </div>
         </div>
     </div>

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="h1   fw-normal text-center">Реєстрація</h1>
+    <div style="height: auto" class="py-4">
+        <main class="form-signin w-100 m-auto" style="color: black">
+            <form method="post" action="{% url 'users:register' %}" class="p-4 p-md-5 border rounded-3 form-signin w-100 m-auto bg-light">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="w-100 btn btn-lg btn-primary" type="submit">Реєстрація</button>
+                <input type="hidden" name="next" value="{% url 'myProject:index' %}">
+            </form>
+        </main>
+    </div>
+
+{% endblock content %}
