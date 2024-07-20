@@ -10,6 +10,7 @@ class User(models.Model):
 
 class Categorie(models.Model):
     name = models.CharField(max_length=50)
+    image = models.ImageField(blank=True ,upload_to='images')
 
     def __str__(self):
         return self.name
@@ -19,6 +20,7 @@ class Game(models.Model):
     category = models.ForeignKey(Categorie, on_delete=models.CASCADE)
     price = models.FloatField()
     short_text = models.TextField()
+    image = models.ImageField(blank=True, upload_to='images')
 
     def __str__(self):
         return self.name
