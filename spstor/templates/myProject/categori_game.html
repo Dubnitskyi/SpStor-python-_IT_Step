@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h2 class="h3 mb-5 fw-normal text-center">Список Ігор</h2>
+<h2 class="h3 mb-5 fw-normal text-center">Список ігор {{ categori}}</h2>
 <div class="row row-cols-1 row-cols-md-3 g-4 categoris-list">
 {% for game in games %}
     <div class="col">
@@ -17,4 +17,4 @@
 {% endfor %}
 </div>
 
-{% endblock content %}
+{% endblock %}
