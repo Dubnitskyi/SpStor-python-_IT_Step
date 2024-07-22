@@ -46,6 +46,7 @@ def new_categori(request):
     context = {'form': form}
     return render(request, 'myProject/new_categori.html',context = context)
 
+
 def new_game(request):
     if request.method != 'POST':
         form = GameForm()

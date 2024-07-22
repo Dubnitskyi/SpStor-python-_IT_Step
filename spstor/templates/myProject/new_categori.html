@@ -4,7 +4,7 @@
     <h2 class="h3 mb-5 fw-normal text-center">Додавання Категорії</h2>
     <div style="height: 450px;">
         <main class="p-4 p-md-5 border rounded-3 form-signin w-100 m-auto bg-light" style="color: black">
-            <form action="{% url 'myProject:new_categori' %}" method="post">
+            <form action="{% url 'myProject:new_categori' %}" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form.as_p }}
                 <div>

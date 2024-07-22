@@ -4,7 +4,7 @@
     <h2 class="h3 mb-5 fw-normal text-center">Додавання гри</h2>
     <div style="height: auto;">
         <main class="p-4 p-md-5 border rounded-3 form-signin w-auto m-auto bg-light" style="color: black">
-            <form action="{% url 'myProject:new_game' %}" method="post">
+            <form action="{% url 'myProject:new_game' %}" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form.as_p }}
                 <div>

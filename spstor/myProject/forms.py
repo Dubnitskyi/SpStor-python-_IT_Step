@@ -9,5 +9,5 @@ class CategoryForm(forms.ModelForm):
 class GameForm(forms.ModelForm):
     class Meta:
         model = Game
-        fields = '__all__'
+        fields = ['name', 'category', 'price', 'short_text', 'image']
         widgets = {'short_text': forms.Textarea(attrs={'cols': 30, 'rows': 7})}
