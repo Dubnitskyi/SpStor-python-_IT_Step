@@ -19,11 +19,10 @@
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                     <li><a href="{% url 'myProject:index' %}" class="nav-link px-2 text-white">Головна</a></li>
-                    <li><a href="{% url 'myProject:about' %}" class="nav-link px-2 text-white">Про SpStor </a></li>
+                    <li><a href="{% url 'myProject:about' %}" class="nav-link px-2 text-white">Про SpStor</a></li>
                     {% if user.is_authenticated %}
                     <li><a href="{% url 'myProject:categories' %}" class="nav-link px-2 text-white">Категорії</a></li>
                     <li><a href="{% url 'myProject:games' %}" class="nav-link px-2 text-white">Ігри</a></li>
-                    <li><a href="{% url 'myProject:library' %}" class="nav-link px-2 text-white">Бібліотека</a></li>
                     {% endif %}
                 </ul>
                 <div class="text-end">

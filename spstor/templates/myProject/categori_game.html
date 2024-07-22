@@ -1,20 +1,29 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h2 class="h3 mb-5 fw-normal text-center">Список ігор {{ categori}}</h2>
-<div class="row row-cols-1 row-cols-md-3 g-4 categoris-list">
-{% for game in games %}
-    <div class="col">
-      <a href=""class="card-link">
-       <center><div class="card" style="width: 18rem;background-color: #58515c;">
-            <img src="{{ game.image.url }}" class="img-fluid rounded-start" alt="">
-          <div class="card-body">
-            <h5 class="card-title">{{ game.name }}</h5>
-          </div>
-        </div></center>
-      </a>
+    <h2 class="h3 mb-5 fw-normal text-center">Список ігор {{ categori }}</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4 categoris-list">
+        {% for game in games %}
+            {% if game.category == categori %}
+                <div class="col">
+                    <a href="{% url 'myProject:game_info' game.id %}" class="card-link">
+                        <center>
+                            <div class="card" style="width: 18rem; background-color: #58515c;">
+                                {% if game.image %}
+                                    <img src="{{ game.image.url }}" class="img-fluid rounded-start" alt="">
+                                {% endif %}
+                                <div class="card-body">
+                                    <h4 class="card-title">{{ game.name }}</h4>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">{{ game.price }} грн.</p>
+                                </div>
+                            </div>
+                        </center>
+                    </a>
+                </div>
+            {% endif %}
+        {% endfor %}
     </div>
-{% endfor %}
-</div>
 
 {% endblock %}

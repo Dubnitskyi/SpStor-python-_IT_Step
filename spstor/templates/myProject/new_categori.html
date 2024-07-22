@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2 class="h3 mb-5 fw-normal text-center">Додавання Категорії</h2>
+    <div style="height: 450px;">
+        <main class="p-4 p-md-5 border rounded-3 form-signin w-100 m-auto bg-light" style="color: black">
+            <form action="{% url 'myProject:new_categori' %}" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div>
+                    <button class="w-100 btn btn-lg btn-primary" type="submit">Додати Категорію</button>
+                    <input type="hidden" name="next" value="{% url 'myProject:categories' %}">
+                </div>
+            </form>
+        </main>
+    </div>
+
+{% endblock content %}
+
